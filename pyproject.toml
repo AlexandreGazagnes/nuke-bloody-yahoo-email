@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yahoo-mail-cli"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "imapclient>=3.1.0",
+    "typer>=0.26.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+yahoo-mail = "yahoo_mail.__main__:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
